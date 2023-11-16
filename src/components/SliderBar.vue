@@ -42,19 +42,19 @@ watchEffect(() => {
         <div class="text-[20px] font-bold w-2/4">白頭翁不吃小米</div>
         <div class="text-[20px] font-bold w-1/4 flex justify-center">
             <div class="circle2 relative border rounded-full ">
-            <div class="line relative top-2 left-3"></div>
+            <div class="line relative top-2 left-[0.6rem]"></div>
             <div class="circle3 absolute top-[1.3rem] right-5"></div>
-            <div class="line2 relative -top-[5.2rem] left-3"></div>
-            <div class="line3  absolute top-[1.1rem] right-1"></div>
+            <div class="line2 relative -top-[5.2rem] left-[0.6rem]"></div>
+            <div class="line3  absolute top-[1.1rem] right-[0.2rem]"></div>
         </div>
         </div>
     </div>
     <div class="h-[190px] bg-white" v-if="openDrawer" :class="{'border-b-4 border-black drop-shadow-xl': openDrawer}" style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);">
-        <div class="text-[18px] font-bold text-center m-auto">
-            <div class="text-[#AA6666] underline underline-offset-1 decoration-2 ">白頭翁的特性</div>
-            <div class="my-5 hover:text-[#aa6666] hover:underline hover: underline-offset-1 decoration-2">白頭翁的故事</div>
-            <div class="my-5 hover:text-[#aa6666] hover:underline hover: underline-offset-1 decoration-2">白頭翁的美照</div>
-            <div class="my-5 hover:text-[#cfb5b5] hover:underline hover: underline-offset-1 decoration-2">白頭翁的危機</div>
+        <div class="text-[18px] font-bold text-center m-auto py-6">
+          <div @click="selectSlider(idx)" class="my-3 cursor-pointer"  v-for="(item, idx) in selcetList" :key="idx"
+                :class="{'text-[#AA6666] underline underline-offset-2 decoration-2':slecetDrawer === idx, 'text-black': slecetDrawer !== idx}">
+              {{item}}
+            </div>
         </div>
     </div>
 </template>
@@ -105,10 +105,10 @@ watchEffect(() => {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
 }
 .circle2 .line {
-  width: 25px;
+  width: 28px;
   height: 95px;
-  border-radius: 120px 25px 0 0 / 120px 40px 0 0;
-  border-top: 9px solid black;
+  border-radius: 120px 40px 0 0 / 80px 60px 0 0;
+  border-top: 6px solid black;
   border-left-width: 12px;
   border-right-width: 12px;
   transform:  rotate(0deg);
@@ -120,7 +120,7 @@ watchEffect(() => {
   background-color: black;
   }
   .circle2 .line2 {
-  width: 25px;
+  width: 28px;
   height: 30px;
   border-radius: 80px 20px 0 0 / 60px 20px 0 0;
   border-top: 8px solid black;
