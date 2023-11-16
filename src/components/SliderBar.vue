@@ -25,11 +25,11 @@ watchEffect(() => {
             <div class="line relative top-6 left-6"></div>
             <div class="circle2 absolute top-[2.6rem] right-9"></div>
             <div class="line2 relative -top-[3.2rem] left-6"></div>
-            <div class="line3  absolute top-[2.4rem] right-3"></div>
+            <div class="line3 absolute top-[2.4rem] right-3"></div>
         </div>
     </div>
         <div class="text-[18px] font-bold text-center m-auto mt-12" >
-            <div @click="selectSlider(idx)" class="my-5  cursor-pointer"  v-for="(item, idx) in selcetList" :key="idx"
+            <div @click="selectSlider(idx)" class="my-5  cursor-pointer hover:text-[#AA6666] hover:underline hover:underline-offset-2 hover:decoration-2"  v-for="(item, idx) in selcetList" :key="idx"
                 :class="{'text-[#AA6666] underline underline-offset-2 decoration-2':slecetDrawer === idx, 'text-black': slecetDrawer !== idx}">
               {{item}}
             </div>
@@ -51,7 +51,7 @@ watchEffect(() => {
     </div>
     <div class="h-[190px] bg-white" v-if="openDrawer" :class="{'border-b-4 border-black drop-shadow-xl': openDrawer}" style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);">
         <div class="text-[18px] font-bold text-center m-auto py-6">
-          <div @click="selectSlider(idx)" class="my-3 cursor-pointer"  v-for="(item, idx) in selcetList" :key="idx"
+          <div @click="selectSlider(idx)" class="my-3 cursor-pointer hover:text-[#AA6666] hover:underline hover:underline-offset-2 hover:decoration-2"  v-for="(item, idx) in selcetList" :key="idx"
                 :class="{'text-[#AA6666] underline underline-offset-2 decoration-2':slecetDrawer === idx, 'text-black': slecetDrawer !== idx}">
               {{item}}
             </div>

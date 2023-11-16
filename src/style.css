@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   color-scheme: light dark;
   color: #000000;
   background-color: gray;
